@@ -69,10 +69,10 @@ def crop_img(filename):
     right = imw
     bottom = imh 
     im1 = im.crop((left, top, right, bottom))
-    im1.save("HALF.PNG")
+    im1.save("/tmp/HALF.PNG")
     
-    img_to_crop = cv2.imread("HALF.PNG", 0)
-    template = cv2.imread("HP1.PNG", 0)
+    img_to_crop = cv2.imread("/tmp/HALF.PNG", 0)
+    template = cv2.imread("/tmp/HP1.PNG", 0)
     res = cv2.matchTemplate(img_to_crop, template, cv2.TM_CCOEFF_NORMED)
     w = template.shape[1]
     h = template.shape[0]
@@ -95,14 +95,14 @@ def crop_img(filename):
     print(rectangles[0])
     crop = rectangles[0][1] + rectangles[0][3]
 
-    im = Image.open("HALF.PNG")
+    im = Image.open("/tmp/HALF.PNG")
     imw, imh = im.size
     left = 1
     top = crop
     right = imw
     bottom = imh
     im1 = im.crop((left, top, right, bottom))
-    im1.save("CROPPED.PNG")
+    im1.save("/tmp/CROPPED.PNG")
 
 
 def read_board(filename):
