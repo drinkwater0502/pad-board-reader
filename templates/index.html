@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <script src="{{url_for('static',filename='script.js')}}"></script>
+    <script src="{{ url_for('static', filename='jquery.js') }}"></script>
+</head>
+<body>
+    <h1>Welcome to Saphira's Board Reader!</h1>
+    <div class="under">
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>(This application only works for iPhone 8 resolutions)</label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" name="image" id="image">
+                </div>
+            </div>
+            <button type="submit" class="button-8" id="submittomode">Upload</button>
+        </form>
+    </div>
+    <img src="{{url_for('static', filename='7095.jpg')}}"/>
+</body>
+</html>

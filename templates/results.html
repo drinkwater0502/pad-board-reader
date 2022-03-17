@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results Page</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <script src="{{url_for('static',filename='script.js')}}"></script>
+    <script src="{{ url_for('static', filename='jquery.js') }}"></script>
+</head>
+<body>
+    <h1>Welcome to Saphira's Board Reader!</h1>
+    <h2 id="code">{{content}}</h2>
+    <button class="result-btn" onclick="copyToClipboard('#code')">Copy to Clipboard</button>
+    <h2><a href="https://pad.dawnglare.com/">Pad Simulator Link</a></h2>
+    <img src="{{url_for('static', filename='7096.jpg')}}"/>
+</body>
+</html>
