@@ -8,9 +8,9 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 app.secret_key = 'lkjhasdlfjkh'
 
-mydir = os.getcwd()
+# mydir = os.getcwd()
 
-app.config["IMAGE_UPLOADS"] = mydir
+app.config["IMAGE_UPLOADS"] = 'HOME/tmp'
 app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["PNG", "JPG", "JPEG"]
 
 def allowed_image(filename):
